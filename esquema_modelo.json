@@ -19,6 +19,8 @@
     "acc_now_delinq",
     "tot_coll_amt",
     "tot_cur_bal",
+    "total_rev_hi_lim",
+    "credit_age_months",
     "home_ownership_ANY",
     "home_ownership_MORTGAGE",
     "home_ownership_NONE",
@@ -65,7 +67,12 @@
     "addr_region_Other",
     "mths_since_last_delinq_flag",
     "mths_since_last_record_flag",
-    "mths_since_last_major_derog_flag"
+    "mths_since_last_major_derog_flag",
+    "payment_stress",
+    "credit_utilization",
+    "inq_per_acc",
+    "delinq_rate",
+    "negative_history"
   ],
-  "total_features": 66
+  "total_features": 73
 }
