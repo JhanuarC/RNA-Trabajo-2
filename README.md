@@ -87,8 +87,8 @@ En Mac/Linux:
 
 
 ## Recursos Adicionales
-- [Video Promocional](https://www.example.com)
-- [Documentación completa](https://www.example.com)
+- [Video Promocional](https://youtu.be/g0DTXd5Za3s)
+- [Documentación completa](https://drive.google.com/file/d/1BeB6piDLQgBf40CNH6TrKdv_TMm4JsNm/view?usp=drive_link)
 
 *Este proyecto fue desarrollado con fines académicos utilizando el dataset público de LendingClub.*
 
