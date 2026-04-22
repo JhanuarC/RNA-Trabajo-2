@@ -72,9 +72,7 @@ En Mac/Linux:
 
     - 🔴 Rojo (< 500): Riesgo alto.
 
-## Screenshots
-
-![App Screenshot](img/img_1.png)
+## Screenshot
 
 ![App Screenshot](img/img_2.png)
 
