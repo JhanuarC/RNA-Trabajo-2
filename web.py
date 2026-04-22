@@ -4,6 +4,7 @@ Aplicación Web de Riesgo Crediticio - Modelo de Red Neuronal (PyTorch)
 Streamlit App para predicción de probabilidad de default y Scorecard.
 """
 
+from IPython.display import Video
 import streamlit as st
 import torch
 import torch.nn as nn
@@ -757,9 +758,14 @@ def main():
     <div class="footer">
         RiskScore AI v1.0 | Modelo: Red Neuronal PyTorch | Scorecard: Logistic Odds Scaling<br>
         Desarrollado para evaluación de riesgo crediticio
-    </div>
     """, unsafe_allow_html=True)
-
+    # Enlaces al video y al repositorio de GitHub
+    st.markdown("""
+        <div style="margin-top: 0.5rem;">
+            <a href="https://www.youtube.com/watch?v=g0DTXd5Za3s" target="_blank" style="color: #1E3A5F; font-weight: 600; margin-right: 1.5rem;">🎥 Ver Video Promocional</a>
+            <a href="https://drive.google.com/file/d/1BeB6piDLQgBf40CNH6TrKdv_TMm4JsNm/view?usp=drive_link" target="_blank" style="color: #1E3A5F; font-weight: 600;">💻 Ver Reporte</a>
+        </div>
+    """, unsafe_allow_html=True)
 
 # ============================================================================
 # EJECUCIÓN
