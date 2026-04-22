@@ -21,11 +21,16 @@ El producto final es una herramienta interactiva construida en **Streamlit** que
 ├── esquema_modelo.json                 # Contrato de columnas y tipos
 ├── credit_risk_nn.pth                  # Pesos de la red neuronal
 ├── requirements.txt                    # Dependencias del proyecto
-└── README.md                           # Documentación principal
+├── README.md                           # Documentación principal
 ├── License                             # Licencia
 ├── img/                                # Screenshots de la página
 │   ├── img_1.png                       # Imagen 1
 │   └── img_2.png                       # Imagen 2
+├── html/                               # Carpeta que contiene la página en html
+│   ├── barchar_term.png                # Imagen 1 para el HTML
+│   ├── loan.png                        # Imagen 2 para el HTML
+│   ├── loggistic_variables             # Imagen 3 para el HTML
+│   └── reporte-blog.html               # Documentación y reporte en HTML
 ```
 
 ## Instalación y Requisitos
@@ -88,7 +93,7 @@ En Mac/Linux:
 
 ## Recursos Adicionales
 - [Video Promocional](https://youtu.be/g0DTXd5Za3s)
-- [Documentación completa](https://drive.google.com/file/d/1BeB6piDLQgBf40CNH6TrKdv_TMm4JsNm/view?usp=drive_link)
+- [Documentación completa en pdf](https://drive.google.com/file/d/1BeB6piDLQgBf40CNH6TrKdv_TMm4JsNm/view?usp=drive_link)(Es el mismo contenido que tiene el reporte en HTML solo que en PDF)
 
 *Este proyecto fue desarrollado con fines académicos utilizando el dataset público de LendingClub.*
 
