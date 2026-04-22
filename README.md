@@ -22,6 +22,7 @@ El producto final es una herramienta interactiva construida en **Streamlit** que
 ├── credit_risk_nn.pth                  # Pesos de la red neuronal
 ├── requirements.txt                    # Dependencias del proyecto
 └── README.md                           # Documentación principal
+├── License                             # Licencia
 ├── img/                                # Screenshots de la página
 │   ├── img_1.png                       # Imagen 1
 │   └── img_2.png                       # Imagen 2
