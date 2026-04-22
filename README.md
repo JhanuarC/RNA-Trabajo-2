@@ -93,7 +93,7 @@ En Mac/Linux:
 
 ## Recursos Adicionales
 - [Video Promocional](https://youtu.be/g0DTXd5Za3s)
-- [Documentación completa en pdf](https://drive.google.com/file/d/1BeB6piDLQgBf40CNH6TrKdv_TMm4JsNm/view?usp=drive_link)(Es el mismo contenido que tiene el reporte en HTML solo que en PDF)
+- [Documentación completa en pdf](https://drive.google.com/file/d/1BeB6piDLQgBf40CNH6TrKdv_TMm4JsNm/view?usp=drive_link) (Es el mismo contenido que tiene el reporte en HTML solo que en PDF)
 
 *Este proyecto fue desarrollado con fines académicos utilizando el dataset público de LendingClub.*
 
