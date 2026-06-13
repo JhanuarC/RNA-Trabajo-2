@@ -977,6 +977,7 @@
     <nav class="toc-bar">
         <div class="toc-bar-inner">
             <a href="#problema" class="toc-link active">El Problema</a>
+            <a href="#marco-teorico" class="toc-link">Marco Teórico</a>
             <a href="#metodologia" class="toc-link">Metodologia</a>
             <a href="#analisis" class="toc-link">Hallazgos</a>
             <a href="#modelos" class="toc-link">Modelos</a>
@@ -1312,8 +1313,8 @@
                 <h3>Fase A: Ingenieria y Preparacion de Datos</h3>
                 <p>Se implemento un pipeline de transformacion que incluyo:</p>
                 <ul class="insight-list">
-                    <li><strong>Limpieza Dimensional:</strong> Reduccion de 68 variables originales a ~66 caracteristicas finales tras la aplicacion de One-Hot Encoding (OHE).</li>
-                    <li><strong>Tratamiento de Nulos:</strong> Uso de Flags Centinela para capturar la ausencia de datos en variables criticas (como meses desde el ultimo retraso) y la imputacion por la mediana para el resto de valores numericos.</li>
+                    <li><strong>Limpieza Dimensional:</strong>Reduccion de 68 variables originales a ~66 caracteristicas finales tras la aplicacion de One-Hot Encoding (OHE) (Pedregosa et al., 2011).</li>
+                    <li><strong>Tratamiento de Nulos:</strong> Uso de Flags Centinela para capturar la ausencia de datos en variables criticas (como meses desde el ultimo retraso) y la imputacion por la mediana para el resto de valores numericos (Pedregosa et al., 2011).</li>
                     <li><strong>Normalizacion:</strong> Aplicacion de un StandardScaler para asegurar que las variables con diferentes magnitudes (como <code>annual_inc</code> vs <code>dti</code>) tengan el mismo peso en el entrenamiento de la red neuronal (Pedregosa et al., 2011).</li>
                 </ul>
 
@@ -1350,7 +1351,7 @@
                 </p>
 
                 <div class="formula-block">
-                    <div class="formula-label">Formula 1: Formula para el Scorecard <span class="cite-tag">PDF &middot; L66-67</span></div>
+                    <div class="formula-label">Formula 1: Formula para el Scorecard <span class="cite-tag">Siddiqi, 2012</span></div>
                     <code>Score = Offset + Factor * ln((1 - p) / p)</code>
                 </div>
 
@@ -1376,7 +1377,7 @@
                     <img src="loan.png" alt="Boxplot de Loan Amount by Default Status" style="max-width: 100%; height: auto;">
                 </div>
                 <p class="caption">
-                    Figura 1. Representacion visual del desbalance de clases (Default vs. Loan amount) en el dataset original. <span class="cite-tag">PDF &middot; L79</span>
+                    Figura 1. Representacion visual del desbalance de clases (Default vs. Loan amount) en el dataset original.<span class="cite-tag">LendingClub, 2020</span>
                 </p>
 
                 <h3>Hipotesis 1: A Mayor Cuantia, Mayor Riesgo</h3>
@@ -1398,7 +1399,7 @@
                     <img src="barchar_term.png" alt="Barplot de Term by Default Status" style="max-width: 100%; height: auto;">
                 </div>
                 <p class="caption">
-                    Figura 2. Representacion visual del desbalance de clases (Default vs. term en el dataset original.) <span class="cite-tag">PDF &middot; L87</span>
+                    Figura 2. Representacion visual del desbalance de clases (Default vs. term en el dataset original.) <span class="cite-tag">LendingClub, 2020</span>
                 </p>
 
                 <h3>Hipotesis 2: El Plazo Multiplica el Riesgo</h3>
@@ -1477,7 +1478,7 @@
                                     <td>73 features</td>
                                     <td>64 neuronas</td>
                                     <td>ReLU</td>
-                                    <td>BatchNorm + Dropout(0.2)</td>
+                                    <td>BatchNorm (Ioffe &amp; Szegedy, 2015) + Dropout(0.2) (Srivastava et al., 2014)</td>
                                 </tr>
                                 <tr>
                                     <td>Capa 2</td>
@@ -1515,7 +1516,7 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px;">
                         <div>
                             <p style="font-size: 0.85rem; color: var(--color-muted); margin-bottom: 2px;">Optimizador</p>
-                            <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Adam</strong> &mdash; lr=0.001, weight_decay=1e-4</p>
+                            <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Adam</strong> &mdash; lr=0.001, weight_decay=1e-4 (Kingma &amp; Ba, 2015)</p>
                         </div>
                         <div>
                             <p style="font-size: 0.85rem; color: var(--color-muted); margin-bottom: 2px;">Funcion de perdida</p>
@@ -1604,7 +1605,7 @@
                     </table>
                 </div>
                 <p class="caption">
-                    Tabla 1. Comparativa de rendimiento entre el modelo base (Regresion Logistica) y el propuesto (Red Neuronal Torch). <span class="cite-tag">PDF &middot; L141-142</span>
+                    Tabla 1. Comparativa de rendimiento entre el modelo base (Regresion Logistica) y el propuesto (Red Neuronal Torch). <span class="cite-tag">Pedregosa et al., 2011</span>
                 </p>
 
                     <h3>Comportamiento de los Modelos</h3>
@@ -1730,6 +1731,8 @@
                         Es decir, la tasa de interes actua como un proxy del riesgo percibido por el mercado.
                         A mayor tasa, mayor presion sobre el flujo de caja del prestatario y mayor probabilidad
                         de incumplimiento.
+
+                        A mayor tasa, mayor presion sobre el flujo de caja del prestatario y mayor probabilidad de incumplimiento (Siddiqi, 2012).
                     </p>
                 </div>
 
@@ -1968,7 +1971,7 @@
                     </table>
                 </div>
                 <p class="caption">
-                    Tabla 2. Matriz de responsabilidades y contribuciones del equipo de trabajo. <span class="cite-tag">PDF &middot; L288</span>
+                    Tabla 2. Matriz de responsabilidades y contribuciones del equipo de trabajo.
                 </p>
 
                 <h3>Prompts Principales Utilizados</h3>
@@ -2001,11 +2004,14 @@
             <section id="bibliografia">
                 <h2>Bibliografia</h2>
                 <ul class="bib-list">
-                    <li>LendingClub. (2020). <em>Credit Risk Dataset</em>. Kaggle. Recuperado de <a href="https://www.kaggle.com/datasets/ranadeep/credit-risk-dataset" target="_blank">https://www.kaggle.com/datasets/ranadeep/credit-risk-dataset</a></li>
-                    <li>Paszke, A., et al. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. En <em>Advances in Neural Information Processing Systems 32</em>. Curran Associates, Inc.</li>
-                    <li>Siddiqi, N. (2012). <em>Credit Risk Scorecards: Developing and Implementing Intelligent Credit Scoring</em>. John Wiley &amp; Sons.</li>
-                    <li>Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. <em>Journal of Machine Learning Research</em>, 12, 2825-2830.</li>
-                    <li>LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. <em>Nature</em>, 521(7553), 436–444. https://doi.org/10.1038/nature14539</li>
+                    <li>Ioffe, S., &amp; Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing internal covariate shift. <em>Proceedings of the 32nd International Conference on Machine Learning (ICML)</em>, 448–456.</li>
+                    <li>Kingma, D. P., &amp; Ba, J. (2015). Adam: A method for stochastic optimization. <em>3rd International Conference on Learning Representations (ICLR)</em>. https://arxiv.org/abs/1412.6980</li>
+                    <li>LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). Deep learning. <em>Nature</em>, 521(7553), 436–444. https://doi.org/10.1038/nature14539</li>
+                    <li>LendingClub. (2020). <em>Credit Risk Dataset</em>. Kaggle. https://www.kaggle.com/datasets/ranadeep/credit-risk-dataset</li>
+                    <li>Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., ... &amp; Chintala, S. (2019). PyTorch: An imperative style, high-performance deep learning library. <em>Advances in Neural Information Processing Systems</em>, 32, 8024–8035.</li>
+                    <li>Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... &amp; Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. <em>Journal of Machine Learning Research</em>, 12, 2825–2830.</li>
+                    <li>Siddiqi, N. (2012). <em>Credit risk scorecards: Developing and implementing intelligent credit scoring</em>. John Wiley &amp; Sons.</li>
+                    <li>Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., &amp; Salakhutdinov, R. (2014). Dropout: A simple way to prevent neural networks from overfitting. <em>Journal of Machine Learning Research</em>, 15(1), 1929–1958.</li>
                 </ul>
             </section>
 
